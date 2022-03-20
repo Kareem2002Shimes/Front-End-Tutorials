@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+section {
+  height: 100vh;
+  font-weight: bold;
+  font-size: 14px;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: crimson;
+}
+.progress-box {
+  display: inline-block;
+}
+.progress-box {
+  margin-left: 30px;
+  width: 500px;
+  height: 30px;
+  background-color: white;
+  position: relative;
+}
+.progress-box .progress-bar {
+  background-color: blue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.3s linear;
+}

@@ -1,0 +1,23 @@
+body {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+section {
+  height: 100vh;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counting {
+  background-color: red;
+}
+.counting .nums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}

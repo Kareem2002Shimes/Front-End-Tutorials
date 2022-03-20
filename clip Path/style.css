@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: #eeee;
+  margin: 50px auto 0;
+  position: relative;
+}
+.parent .x-ax {
+  position: absolute;
+  top: -30px;
+  left: 15px;
+}
+.parent .y-ax {
+  position: absolute;
+  top: 30px;
+  left: -45px;
+  transform: rotate(-90deg);
+}
+.parent .arrow {
+  width: 100px;
+  height: 2px;
+  background-color: rgb(0, 183, 255);
+}
+.parent span:first-child.arrow {
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 60%;
+  transform: translateY(-50%);
+}
+.parent .x-ax .arrow::after {
+  content: "";
+  position: absolute;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(0, 183, 255);
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.parent .y-ax .arrow::after {
+  content: "";
+  position: absolute;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(0, 183, 255);
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.parent span:nth-child(2) .arrow {
+  position: absolute;
+  left: -230%;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.parent span:last-child {
+  position: absolute;
+  top: 30px;
+  left: -45px;
+  transform: rotate(-90deg);
+}
+.parent .clip-main {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.parent .c1 {
+  background-color: tomato;
+  clip-path: circle(25% at 50% 50%);
+}
+.parent .t1 {
+  background-color: greenyellow;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.parent .t2 {
+  background-color: orangered;
+  clip-path: polygon(50% 50%, 100% 100%, 100% 0%);
+}
